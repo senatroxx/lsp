@@ -3,7 +3,7 @@
 @section('title', 'Guru - Data Nilai')
 
 @section('content')
-<h2>Data Mengajar</h2><br>
+<h2>Data Nilai</h2><br>
 <table class="table">
   <tr>
     <th>ID</th>

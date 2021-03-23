@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('login', 'admin');
 });
 
 Route::get('login/{role}', 'Auth\AuthController@viewLogin')->name('login');

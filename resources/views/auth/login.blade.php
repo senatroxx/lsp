@@ -2,44 +2,23 @@
 
 @section('title', 'Login')
 
-@section('sidebar')
-<form action="{{ route('login', $role) }}" method="post">
-  <table>
+@section('content')
+<div class="login-container">
+  <form action="{{ route('login', $role) }}" method="post" class="login-form">
     @csrf
-    <tr>
       @if($role == 'siswa')
-        <td>
-          <label for="nis">NIS</label>
-        </td>
-        <td>
-          <input required autofocus type="number" name="nis" id="nis">
-        </td>
+        <h2>Login Siswa</h2>
+        <input required autofocus type="number" name="nis" id="nis" placeholder="NIS">
       @elseif($role == 'guru')
-        <td>
-          <label for="nip">NIP</label>
-        </td>
-        <td>
-          <input required autofocus type="number" name="nip" id="nip">
-        </td>
+        <h2>Login Guru</h2>
+        <input required autofocus type="number" name="nip" id="nip" placeholder="NIP">
       @elseif($role == 'admin')
-        <td>
-          <label for="username">Username</label>
-        </td>
-        <td>
-          <input required autofocus type="text" name="username" id="username">
-        </td>
+        <h2>Login Admin</h2>
+        <input required autofocus type="text" name="username" id="username" placeholder="Username">
       @endif
-    </tr>
-    <tr>
-      <td>
-        <label for="password">Password</label>
-      </td>
-      <td>
-        <input required type="password" name="password" id="password">
-      </td>
-    </tr>
-  </table>
+        <input required type="password" name="password" id="password" placeholder="Password">
 
     <input type="submit" value="Login">
-</form>
+  </form>
+</div>
 @endsection

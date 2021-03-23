@@ -60,7 +60,7 @@ class AuthController extends Controller
             ]);
             return redirect()->route("$role.home"); //redirect to home route role itself
         }else{
-            return redirect()->route('login', ['role' => $role, 'error' => 'Wrong Credentials']);
+            return redirect()->route('login', ['role' => $role])->withErrors('Wrong Credentials');
         }
     }
 
