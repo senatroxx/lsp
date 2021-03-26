@@ -5,30 +5,51 @@
 @section('sidebar')
 <form action="{{ route('admin.siswa.insert') }}" method="post">
 @csrf
-<label for="nis">NIS</label>
-<input type="number" name="nis" id="NIS"><br>
+<table>
+  <tr>
+    <td><label for="nis">NIS</label></td>
+    <td><input type="number" name="nis" id="NIS"><br></td>
+  </tr>
 
-<label for="nama">Nama</label>
-<input type="text" name="nama" id="nama"><br>
+  <tr>
+    <td><label for="nama">Nama</label></td>
+    <td><input type="text" name="nama" id="nama"><br></td>
+  </tr>
 
-<label for="jk">Jenis Kelamin</label><br>
-<input type="radio" name="jk" value="L" id="jk">Laki-Laki<br>
-<input type="radio" name="jk" value="P" id="jk">Perempuan<br>
+  <tr>
+    <td><label for="jk">Jenis Kelamin</label><br></td>
+    <td>
+      <input type="radio" name="jk" value="L" id="jk">Laki-Laki<br>
+      <input type="radio" name="jk" value="P" id="jk">Perempuan<br>
+    </td>
+    
+  </tr>
 
-<label for="alamat">Alamat</label><br>
-<textarea name="alamat" id="alamat" cols="30" rows="3"></textarea><br>
+  <tr>
+    <td><label for="alamat">Alamat</label><br></td>
+    <td><textarea name="alamat" id="alamat" cols="30" rows="3"></textarea><br></td>
+  </tr>
 
-<label for="password">Password</label>
-<input type="password" name="password" id="password"><br>
+  <tr>
+    <td><label for="password">Password</label></td>
+    <td><input type="password" name="password" id="password"><br></td>
+  </tr>
 
-<label for="kelas">Kelas</label>
-<select name="kelas" id="kelas">
-  @foreach($kelas as $item)
-    <option value="{{ $item->id }}">{{ $item->nama }}</option>
-  @endforeach
-</select><br>
+  <tr>
+    <td><label for="kelas">Kelas</label></td>
+    <td>
+      <select name="kelas" id="kelas">
+        @foreach($kelas as $item)
+          <option value="{{ $item->id }}">{{ $item->nama }}</option>
+        @endforeach
+      </select><br>
+    </td>
+  </tr>
 
-<input type="submit" value="Submit">
+  <tr>
+    <td colspan=2><input type="submit" value="Submit"></td>
+  </tr>
+</table>
 </form>
 @endsection
 
