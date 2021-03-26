@@ -1,5 +1,6 @@
 *{margin:0; padding:0}
 a{color:#f7f7f7;text-decoration: none;}
+html, body{height:100%}
 body{background-color: #f7f7f7;font-family: Arial, Helvetica, sans-serif;}
 .clear-both{clear: both;}
 .table{width: 100%;}
@@ -7,7 +8,7 @@ body{background-color: #f7f7f7;font-family: Arial, Helvetica, sans-serif;}
 .login-form-button{margin:15px 0}
 .login-form-subtitle{margin-bottom:10px;margin-top:5px}
 
-.container{width: 1024px;margin: 0 auto;box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.27);}
+.container{width: 1024px;margin: 0 auto;box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.27);overflow-y: auto;height: 100%;background-color: #187bcd;}
 .header{background-image: url('../img/header.jpg');height:300px;display: flex;align-items: flex-end;background-repeat: no-repeat;background-position: top;background-size: cover;}
 .header h1{color:#f7f7f7;padding:100px 10px;text-align: center;font-size: 64px;}
 .navbar{background: #1167b1;width: 100%;box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.27);}
@@ -18,8 +19,8 @@ body{background-color: #f7f7f7;font-family: Arial, Helvetica, sans-serif;}
 .navbar ul li a.active{background-color: #187bcd;border-radius: 3px;}
 .navbar ul li a:hover{background-color: #187bcd;border-radius: 3px;}
 .content{display: grid;grid-template-columns: repeat(12, minmax(0, 1fr));}
-.content .sidebar{grid-column: span 4 / span 4;background-color: #187bcd;padding:10px;color:#f7f7f7}
-.content .main{background-color: #187bcd;grid-column: span 8 / span 8;padding:15px;color: #f7f7f7;min-height: 50vh;}
+.content .sidebar{grid-column: span 4 / span 4;padding:10px;color:#f7f7f7}
+.content .main{grid-column: span 8 / span 8;padding:15px;color: #f7f7f7;height: 100%;}
 
 .table td, .table th {border: 1px solid #ddd;text-align: left;}
 .table {border-collapse: collapse;width: 100%;}
@@ -33,3 +34,11 @@ input:focus{outline: none;}
 .login-form input{width: 100%;font-size: 18px;margin: 10px 0;padding: 10px 15px;}
 .login-form input[type='submit']:hover{cursor: pointer;background-color: #f2f2f2;}
 .login-form h2{text-align: center;}
+
+.alert {
+    padding: 20px;
+    background-color: #f44336; /* Red */
+    color: white;
+    margin-bottom: 15px;
+    border-radius: 5px;
+  }

@@ -39,7 +39,7 @@ class GuruController extends Controller
     public function insert(Request $request)
     {
         $request->validate([
-            'siswa' => 'required',
+            'siswa' => 'required|unique:nilai,nis',
             'mengajar' => 'required',
             'uh' => 'required',
             'uts' => 'required',
